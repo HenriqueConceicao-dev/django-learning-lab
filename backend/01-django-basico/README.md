@@ -1,17 +1,36 @@
-# Django Básico
+# Django Basics
 
-## Objetivo
+## Objective
 
-Iniciar a base do framework Django e compreender sua estrutura principal.
+Build a solid understanding of Django fundamentals and its core project structure.
 
-## O que foi feito
+---
 
-- Criação do projeto Django
-- Estrutura inicial com `startproject`
-- Execução do servidor local
+## Concepts Covered
 
-## Como rodar o projeto
+- Django project creation
+- Initial project structure using `startproject`
+- Running the local development server
+
+---
+
+## Implemented Features
+
+- Initial Django setup
+- Base project structure creation
+- Local server execution and validation
+
+---
+
+## Running the Project
 
 ```bash
 cd projeto_base
 python manage.py runserver
+```
+
+---
+
+## Notes
+
+This module focuses on understanding the initial foundation of Django projects and how the framework organizes its core structure.
