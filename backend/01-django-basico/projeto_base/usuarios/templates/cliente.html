@@ -1,2 +1,131 @@
-<h1>CLIENTE</h1>
-<input type="text">
+{% extends "base.html" %}
+
+{%block 'conteudo'%}
+<body class="bg-gray-100 min-h-screen">
+    <!-- CONTEÚDO -->
+    <main class="max-w-7xl mx-auto p-8">
+
+        <h1 class="text-3xl font-bold mb-8">
+            Pacientes
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- LISTA DE PACIENTES -->
+            <section class="bg-white rounded-xl shadow p-6">
+
+                <h2 class="text-xl font-semibold mb-4">
+                    Lista de Pacientes
+                </h2>
+
+                <ul class="space-y-4">
+
+                    <!-- PACIENTE 1 -->
+                    <li class="border rounded-lg p-4 flex justify-between items-center">
+
+                        <div>
+                            <p class="font-medium">
+                                Maria Silva
+                            </p>
+
+                            <p class="text-sm text-gray-500">
+                                maria@email.com
+                            </p>
+                        </div>
+
+                        <span class="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded">
+                            Depressão
+                        </span>
+                    </li>
+
+                    <!-- PACIENTE 2 -->
+                    <li class="border rounded-lg p-4 flex justify-between items-center">
+
+                        <div>
+                            <p class="font-medium">
+                                João Pereira
+                            </p>
+
+                            <p class="text-sm text-gray-500">
+                                joao@email.com
+                            </p>
+                        </div>
+
+                        <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded">
+                            Ansiedade
+                        </span>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- FORMULÁRIO -->
+            <section class="bg-white rounded-xl shadow p-6">
+
+                <h2 class="text-xl font-semibold mb-4">
+                    Cadastrar Paciente
+                </h2>
+
+                <form class="space-y-4">
+
+                    <!-- NOME -->
+                    <div>
+                        <label class="block text-sm font-medium mb-1">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div>
+                        <label class="block text-sm font-medium mb-1">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+
+                    <!-- QUEIXA -->
+                    <div>
+                        <label class="block text-sm font-medium mb-1">
+                            Queixa Principal
+                        </label>
+
+                        <select
+                            class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option value="">
+                                Selecione...
+                            </option>
+
+                            <option value="depressao">
+                                Depressão
+                            </option>
+
+                            <option value="ansiedade">
+                                Ansiedade
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- BOTÃO -->
+                    <button
+                        type="submit"
+                        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+                    >
+                        Cadastrar Paciente
+                    </button>
+
+                </form>
+            </section>
+
+        </div>
+    </main>
+{%endblock%}
