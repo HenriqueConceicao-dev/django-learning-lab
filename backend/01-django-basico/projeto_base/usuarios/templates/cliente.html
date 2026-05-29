@@ -66,7 +66,7 @@
                     Cadastrar Paciente
                 </h2>
 
-                <form class="space-y-4">
+                <form class="space-y-4" action="{% url 'cliente' %}" method="POST">{% csrf_token %}
 
                     <!-- NOME -->
                     <div>
@@ -75,7 +75,7 @@
                         </label>
 
                         <input
-                            type="text"
+                            type="text" name="nome"
                             class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
@@ -87,7 +87,7 @@
                         </label>
 
                         <input
-                            type="email"
+                            type="email" name="email"
                             class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
@@ -98,18 +98,18 @@
                             Queixa Principal
                         </label>
 
-                        <select
+                        <select name="queixa"
                             class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="">
                                 Selecione...
                             </option>
 
-                            <option value="depressao">
+                            <option value="D">
                                 Depressão
                             </option>
 
-                            <option value="ansiedade">
+                            <option value="A">
                                 Ansiedade
                             </option>
                         </select>
